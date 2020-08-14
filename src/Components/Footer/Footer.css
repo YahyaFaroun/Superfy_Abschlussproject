@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+footer{
+    background:rgb(246, 246, 246) ;
+}
+p{
+    letter-spacing: 8px;
+    color: rgb(88, 88, 88);
+    padding: 10vh 0;
+    font-size: 1.3em;
+}
+.input{
+    border: none;
+    border-bottom: solid 1px;
+    width: 44%;
+    color: rgb(212, 212, 212);
+    background:rgb(246, 246, 246) ;
+    margin-right:5%
+}
+.beschreibung{
+    border: none;
+    border-bottom: solid 1px;
+    width: 93%;
+    color: rgb(212, 212, 212);
+    margin-top: 10vh;
+    background:rgb(246, 246, 246) ;
+}
+.submit{
+    padding: 15px;
+    font-size: 1.3em;
+    border: none;
+    background: rgb(20, 215, 104);
+    color: white;
+    border-radius: 5px;
+    margin-top: 5vh;
+}
+img{
+    width: 50px;
+}
+.rahmen{
+    box-shadow: 0px 7px 3px #888888;
+    padding: 7px;
+    height: 50px;
+}
+.grid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 10%;
+}
+.flex{
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+}
+.width{
+    width: 65%;
+}
