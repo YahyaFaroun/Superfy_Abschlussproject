@@ -1,16 +1,20 @@
 import React from 'react';
+ import Footer from './Components/Footer/Footer'
+
 import './App.css';
-import Footer from './Components/Footer/Footer'
 import Header from './Components/Header/Header';
-import MusicList from './Components/MusicList';
 
+function App() {
+  return (
+    <div className="App">
+      <Header/>
+       <Footer/> 
       
-
+import MusicList from './Components/MusicList';
 
 const App = () => {
   return ( 
-      <div>
-      <Header />
+    <div>
       <MusicList />
       <Footer />
     </div>
