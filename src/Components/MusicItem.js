@@ -1,21 +1,14 @@
-import React, { Component } from 'react';
-import { SpotifyApiContext } from 'react-spotify-api';
+import React from 'react';
 
-class MusicItem extends Component {
-    state = { 
-        data: []
-    }
-    componentDidMount() {
-        fetch('https://jsonplaceholder.typicode.com/todos/1')
-  .then(response => response.json())
-  .then(json => console.log(json))
-    }
-    render() { 
-        return (<div>
-    
-        </div > 
-        );
-    }
+
+const MusicItem = (props) => {
+    return (
+        <div>
+            <img src={props.images[0].url} alt="" />
+            <h1>Artist: {props.name}</h1>
+            <p>Popularity: {props.popularity}</p>
+        </div>
+      );
 }
  
 export default MusicItem;
