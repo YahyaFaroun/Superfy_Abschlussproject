@@ -1,20 +1,16 @@
 import React from 'react';
- import Footer from './Components/Footer/Footer'
-
 import './App.css';
+import Footer from './Components/Footer/Footer'
 import Header from './Components/Header/Header';
-
-function App() {
-  return (
-    <div className="App">
-      <Header/>
-       <Footer/> 
-      
 import MusicList from './Components/MusicList';
+
+      
+
 
 const App = () => {
   return ( 
-    <div>
+      <div>
+      <Header />
       <MusicList />
       <Footer />
     </div>
@@ -23,6 +19,7 @@ const App = () => {
  
 export default App;
 
+//testtesttest
 
 // const url = "https://api.spotify.com/v1/artists?ids=2CIMQHirSU0MQqyYHq0eOx%2C57dN52uHvrHOxijzpIgu3E%2C1vCWHaC5f2uS3yhpwWbIA6"
 // const options = {
@@ -89,5 +86,3 @@ export default App;
 // }
 
 // export default App;
-
-
