@@ -3,6 +3,7 @@ import './App.css';
 import Footer from './Components/Footer/Footer'
 import Header from './Components/Header/Header';
 import MusicList from './Components/MusicList';
+import DetailedArtist2 from './Components/DetailedArtist2';
 
       
 
@@ -12,6 +13,7 @@ const App = () => {
       <div>
       <Header />
       <MusicList />
+      <DetailedArtist2 />
       <Footer />
     </div>
    );

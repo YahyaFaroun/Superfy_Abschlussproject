@@ -20,14 +20,14 @@ data: []
       .then(json => {
         // console.log(json);
         this.setState({ data: json.artists });
-        console.log(this.state.data)
+        console.log(json)
       })
   }
 
   render() { 
     return ( 
         <div className="grid">
-            {this.state.data.map((elt, i) =>
+            {/* {this.state.data.map((elt, i) =>
                 <MusicItem
                     key={i}
                     images={elt.images}
@@ -37,7 +37,7 @@ data: []
             
             
             
-            )}
+            )} */}
             
       </div>
      );
