@@ -4,11 +4,18 @@
 }
 footer{
     background:rgb(246, 246, 246) ;
+    padding: 16vh 0;
 }
-p{
+.pHead{
     letter-spacing: 8px;
     color: rgb(88, 88, 88);
-    padding: 10vh 0;
+    padding: 0 0 12vh 0;
+    font-size: 1.3em;
+}
+.pHead1{
+    letter-spacing: 8px;
+    color: rgb(88, 88, 88);
+    padding: 0 0 5vh 0;
     font-size: 1.3em;
 }
 .input{
@@ -17,7 +24,8 @@ p{
     width: 44%;
     color: rgb(212, 212, 212);
     background:rgb(246, 246, 246) ;
-    margin-right:5%
+    margin-right:5%;
+    outline: none;
 }
 .beschreibung{
     border: none;
@@ -26,9 +34,10 @@ p{
     color: rgb(212, 212, 212);
     margin-top: 10vh;
     background:rgb(246, 246, 246) ;
+    outline: none;
 }
 .submit{
-    padding: 15px;
+    padding: 15px 22px;
     font-size: 1.3em;
     border: none;
     background: rgb(20, 215, 104);
@@ -36,18 +45,18 @@ p{
     border-radius: 5px;
     margin-top: 5vh;
 }
-img{
+.imgB{
     width: 50px;
 }
 .rahmen{
-    box-shadow: 0px 7px 3px #888888;
+    box-shadow: 0px 12px 5px rgb(213, 213, 214);
     padding: 7px;
     height: 50px;
 }
 .grid{
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    gap: 10%;
+    gap: 15%;
 }
 .flex{
     display: flex;
@@ -55,5 +64,74 @@ img{
     margin: 0 auto;
 }
 .width{
-    width: 65%;
+    width: 68%;
+}
+.footerTail{
+    display: flex;
+}
+.tail{
+    margin: 17vh 0 0 10%;
+    display: flex;
+    justify-content: space-between;
+    width: 20%;
+    color: rgb(177, 177, 177);
+}
+.spano{
+    margin: 0 2%;
+}
+.spotify{
+    width: 12%;
+    margin-left:47%;
+}
+@media only screen and (max-width: 768px){
+    .flex{flex-direction: column;width: 80%;}
+    .width{width: 100%;}
+    .media{width: 15%;margin-top: 5vh;}
+    .tail{
+        display: none;
+    }
+    .footerTail{
+        position: relative;
+    }
+    .spotify{
+        position: absolute;
+        bottom: 0;
+        right:10%;
+        width: 130px;
+    }
+}
+@media only screen and (max-width:320px){
+    .flex{flex-direction: column;width: 80%;}
+    .width{width: 100%;}
+    .media{width: 15%;margin-top: 5vh;}
+    .imgB{
+        width: 25px;
+        height: 25px;
+    }
+    .tail{
+        display: none;
+    }
+    .footerTail{
+        position: relative;
+    }
+    .spotify{
+        position: absolute;
+        bottom: 0;
+        right:10%;
+        width: 80px;
+    }
+    .rahmen{
+        box-shadow: 0px 12px 5px rgb(213, 213, 214);
+    }
+    .pHead1{
+        font-size: 0.8em;
+    }
+    .submit{
+        padding:10px;
+        font-size: 0.8em;
+    }
+    .pHead{
+        text-align: center;
+        font-size: 0.9em;
+    }
 }
