@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import './DetailedArticle.css';
+import DetailedItem from './DetailedItem';
+
 
 let data
 
@@ -31,19 +34,34 @@ class DetailedArtist extends Component {
             console.log(newArr)
             
             this.setState({ dataDetails: newArr }, () => {
-                console.log( this.state.dataDetails)
-                data = this.state.dataDetails[0].map((elem, i) =>
-                       
-                        <article key={i}>
-                            <h2>{elem.name}</h2>
-                            <a href={elem.external_urls.spotify}>   <img src={elem.images[0].url} alt="" /></a>
-                            <h1>{elem.album_type}</h1> 
+                console.log(this.state.dataDetails)
                
+                data = this.state.dataDetails[0].map((elem, i) =>
+                    //    <div className="albums">
+                    //     <article>
+                    //         <div className="container" key={i}>
+                    //             <img src={elem.images[0].url} alt="" />
+                    //             <div className="overlay">
+                    //             <a href={elem.external_urls.spotify} className="text">Play Now</a>
+                    //             </div>
+                          
+               
+                    //         </div>
         
     
                      
-                        </article>
-                    )
+                    //     </article>
+                    // </div>
+                    
+                    <DetailedItem
+                        key={i}
+                        images={elem.images}
+                        external_urls={elem.external_urls}
+                    />
+
+
+                )
+             
                     this.setState({ isLoaded: true });
                 })
                 
@@ -52,7 +70,7 @@ class DetailedArtist extends Component {
 
     render() { 
         return ( 
-            <div>
+            <div className="albums">
                    {this.state.isLoaded ? data : 'Is loading'}
             </div>
          );

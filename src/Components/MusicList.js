@@ -23,7 +23,7 @@ class MusicList extends Component {
       .then(json => {
         // console.log(json);
         this.setState({ data: json.artists });
-        console.log(this.state.data)
+        console.log(json)
       })
     }
   

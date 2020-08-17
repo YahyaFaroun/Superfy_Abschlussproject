@@ -1,87 +1,138 @@
-#abdulhaq{
+*{
     margin: 0;
     padding: 0;
-    height: 70vh;
 }
-#abduh1{
+.logoH{
+    width: 120px;
+    height: 100px;
+    margin-right: 2%;
+}
+.header{
     display: flex;
-    margin-left: 20%;
-    margin-top: 5%;
-    /* align-items: center; */
+    margin: 10vh 0 8vh 10%;
 }
-#abduh1s1{
-    color: rgb(68, 67, 67);
-    font-size: 1.5em;
-    letter-spacing: 20px;
-    text-shadow: black;
-    margin-top: 2%;
-    align-items: center;
+.div{
+    height: 95px;
+    border: solid 2px;
+    margin:0 20px 0 0;
 }
-#abduh1s2{
-    border-right: black 5px solid;
-    font-size: 3em;
-    margin-left: 1%;
-    align-items: center;
-}
-#abduh1s3{
+.sf{
     font-size: 2.5em;
-    margin-left: 3%;
-    align-items: center;
+    letter-spacing: 20px;
+    padding-top: 20px;
+    -webkit-text-fill-color: rgb(88, 88, 88); 
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+    text-shadow: 0 3px 3px rgb(88, 88, 88);
 }
-#abduh2{
+.charts{
+    padding-top: 20px;
     font-size: 3em;
+    letter-spacing: 10px;
+}
+.searchB{
     display: flex;
-    align-items: center;
-    margin-top: 7%;
-    margin-left: 8.5%;
-    color: grey;
+    margin-left: 10%;
 }
-#abduh2s1{
-    margin-left: 1%;
-    /* align-items: center; */
+.searchA{
+    width: 40%;
 }
-#abduh2s2{
-    margin-left: 2.5%;
-    /* align-items: center; */
+#input{
+    width: 100%;
+    border: rgb(183, 177, 177) solid 3px;
+    padding: 10px 0 10px 25px;
+    font-size: 1em;
+    color: rgb(183, 177, 177);
+    margin:1vh 0 0 7%;
 }
-#abduh2s3{
-    margin-left: 1%;
-    /* align-items: center; */
+.in{
+    position: relative;
 }
-/* #bot1{ */
-    /* position: absolute;
+.container{
     display: flex;
-    margin-top: -6%;
-    margin-left: 50%; */
-/* } */
-#buttons{
-    margin-top: -4%;
-   display: flex;
+    width: 25%;
+    justify-content: space-between;
 }
-#textbut1{
-    display: flex;
-    align-items: center;
-    margin-left: 45%;
-    width: 45vw;
-    height: 6vh;
-    border: grey 4px solid;
-}
-#but1{
-    /* position: relative; */
-    /* margin-left: 77%;
-    background: rgb(56, 240, 127);
+.butt{
     position: absolute;
-    /* margin-top: -3.9%; */
-    margin-top: 1px;
-    height: 6.6%;
-    width: 13.6%;
-    align-items: center;
+    right: -64px;
+    top: 10.1px;
+    background: rgb(56, 240, 127);
+    padding: 11px 30px;
+    letter-spacing: 8px;
+    outline: none;
+    border: none;
+    box-shadow: 0 0 5px rgb(88, 88, 88);
 }
-#abdpara1{
-    margin-top: 5%;
-    margin-left: 8.5%;
-    width: 75%;
+.top{
+    font-size: 2.5em;
+    color: rgb(88, 88, 88);
+    margin-right: 2%;
 }
-#abdpara2{
-    margin-left: 8.5%;
+#paragraph{
+    margin-left: 10%;
+    color: rgb(88, 88, 88);
+    width: 65%;
+    line-height: 4vh;
+    margin-top: 4vh;
+}
+
+@media only screen and (max-width: 768px){
+    #input{    
+        padding: 10px 0 10px 0;
+        font-size: 12px;
+        margin-top: 1vh;
+    }
+    .top{
+        margin-right: 0;
+    }
+    .butt{
+        right: -23px;
+        top: 3px;
+        padding: 9px 10px;
+        letter-spacing: 5px;
+        outline: none;
+        border: none;
+        box-shadow: 0 0 5px rgb(88, 88, 88);
+        margin-top: 1vh;
+    }
+    .container{
+        display: flex;
+        width: 45%;
+    }
+    #paragraph{
+        width: 80%;
+    }
+}
+@media only screen and (max-width: 320px){
+    .searchB{
+        flex-direction: column;
+    }
+    .butt{
+        right: -41px;
+        top: 3px;
+        padding: 9px 10px;
+        outline: none;
+    }
+    .searchB{
+        width: 207%;
+        margin:0 auto;
+        text-align: center;
+    }
+    .container{
+        display: flex;
+        width: 50%;
+        justify-content: space-between;
+        margin: 0 auto;
+    }
+    .searchA{
+        margin: 5vh auto;
+        width: 85%;
+        margin-left: 2%;
+    }
+    #paragraph{
+        width: 200%;
+        text-align: center;
+        margin-left:5%;
+    }
 }

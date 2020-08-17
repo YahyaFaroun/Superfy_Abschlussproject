@@ -1,5 +1,4 @@
 import React from 'react';
-
 import {
   BrowserRouter as Router,
   Switch,
@@ -15,6 +14,7 @@ import './Components/Body.css';
 import Search from './Components/Search';
 import NoMatch from './Components/404';
 
+
       
 
 function App(props) {
@@ -22,7 +22,7 @@ function App(props) {
     <Router>
       {props.children}
       <div>
-        {/* <Header /> */}
+        <Header />
       <Switch>
           <Route path="/" exact>
           <Search />

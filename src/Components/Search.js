@@ -62,13 +62,21 @@ class Search extends Component {
 render() {
     return (
         <div>
-            <form action="">
-                <input id="text" type="text" placeholder='Search for an artist....' onChange={this.handleArtist} />
+             <article className='searchA'>
+             <form className='in' action="">
+                <input id="input" type="text" placeholder='Search for an artist....' onChange={this.handleArtist} />
 
-                <input id="bot1" type="button" value="SEARCH" onClick={this.handleSubmit} />
+                <input className='butt' type="button" value="SEARCH" onClick={this.handleSubmit} />
 {/* 
                 <input id="bot1" type="button" value="CLEAR SEARCH" onClick={this.handleClear} /> */}
-            </form>
+                </form>
+                </article>
+            {/* <article className='searchA'>
+                <form className='in' action="">
+                    <input type="text" name="" id="input" placeholder='Search by keyword or item...'/>
+                    <input className='butt' type="submit" value="SEARCH"/>
+                </form>
+            </article> */}
             <div className="grid1">
 {this.state.isLoading?'loading':this.state.data.map((elt, i) =>
                 <MusicItem

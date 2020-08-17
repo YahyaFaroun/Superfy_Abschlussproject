@@ -1,0 +1,84 @@
+.albums{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    justify-content: center;
+    gap: 1em;
+    margin: 0 auto;
+    width: 90%;
+    align-items: center;
+    text-align: center;
+}
+.container{
+    position: relative;
+}
+.overlay {
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    right: 0;
+    background-color: white;
+    opacity: .5;
+    overflow: hidden;
+    width: 100%;
+    /* height:0; */
+    transition: .5s ease;
+}
+.container:hover .overlay{
+    bottom: 0;
+    height: 100%;
+}
+.text{
+    position: absolute;
+    font-size: 6em;
+    text-decoration: none;
+    text-align: center;
+    color: black;
+    width: 100%;
+    height: 100%;
+    top: 38vh;
+    left: 50%;
+    padding-top: 400px;
+
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+.link{
+    font-size: 6px;
+    text-decoration: none;
+    color: black;
+}
+
+@media only screen and (max-width: 768px) and (min-width: 320px){
+    .albums{
+        display:grid;
+        grid-template-columns: 1fr;
+        justify-content: center;
+        width: 90%;
+        margin: 0 auto;
+        height: 80vh;
+        
+    }
+    .album{
+        margin: 5vh auto;
+    }
+}
+@media only screen and (max-width: 320px){
+    .albums{
+        height: 80vh;
+    }
+    .albus{
+        display:grid;
+        grid-template-columns: 1fr;
+        justify-content: center;
+        width: 90%;
+        margin: 0 auto;
+    }
+    .container{
+        width: 50%;
+    }
+    img{
+        width: 300px;
+        
+        }
+}
