@@ -1,0 +1,147 @@
+<<<<<<< HEAD
+=======
+*{
+    margin: 0;
+    padding: 0;
+}
+footer{
+    background:rgb(246, 246, 246) ;
+    padding: 16vh 0;
+}
+.pHead{
+    letter-spacing: 8px;
+    color: rgb(88, 88, 88);
+    padding: 0 0 12vh 0;
+    font-size: 1.3em;
+}
+.pHead1{
+    letter-spacing: 8px;
+    color: rgb(88, 88, 88);
+    padding: 0 0 5vh 0;
+    font-size: 1.3em;
+}
+.input{
+    border: none;
+    border-bottom: solid 1px;
+    width: 44%;
+    color: rgb(212, 212, 212);
+    background:rgb(246, 246, 246) ;
+    margin-right:5%;
+    outline: none;
+}
+.beschreibung{
+    border: none;
+    border-bottom: solid 1px;
+    width: 93%;
+    color: rgb(212, 212, 212);
+    margin-top: 10vh;
+    background:rgb(246, 246, 246) ;
+    outline: none;
+}
+.submit{
+    padding: 15px 22px;
+    font-size: 1.3em;
+    border: none;
+    background: rgb(20, 215, 104);
+    color: white;
+    border-radius: 5px;
+    margin-top: 5vh;
+}
+.imgB{
+    width: 50px;
+}
+.rahmen{
+    box-shadow: 0px 12px 5px rgb(213, 213, 214);
+    padding: 7px;
+    height: 50px;
+}
+.grid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 15%;
+}
+.flex{
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+}
+.width{
+    width: 68%;
+}
+.footerTail{
+    display: flex;
+}
+.tail{
+    margin: 17vh 0 0 10%;
+    display: flex;
+    justify-content: space-between;
+    width: 20%;
+    color: rgb(177, 177, 177);
+}
+.spano{
+    margin: 0 2%;
+}
+.logo{
+    width: 120px;
+    height: 100px;
+    margin-left:47%;
+
+}
+@media only screen and (max-width: 768px){
+    .flex{flex-direction: column;width: 80%;}
+    .width{width: 100%;}
+    .media{width: 15%;margin-top: 5vh;}
+    .tail{
+        display: none;
+    }
+    .footerTail{
+        position: relative;
+    }
+    .logo{
+        position: absolute;
+        bottom: 0;
+        right:10%;
+        width: 130px;
+    }
+}
+@media only screen and (max-width:320px){
+    .flex{flex-direction: column;width: 80%;}
+    .width{width: 100%;}
+    .media{width: 15%;margin-top: 5vh;}
+    .imgB{
+        width: 25px;
+        height: 25px;
+    }
+    .tail{
+        display: none;
+    }
+    .footerTail{
+        position: relative;
+    }
+    .logo{
+        position: absolute;
+        bottom: -3vh;
+        right:10%;
+        width: 120px;
+        height: 100px;
+    }
+    .rahmen{
+        box-shadow: 0px 12px 5px rgb(213, 213, 214);
+    }
+    .pHead1{
+        font-size: 0.8em;
+    }
+    .submit{
+        padding:10px;
+        font-size: 0.8em;
+    }
+    .pHead{
+        text-align: center;
+        font-size: 0.9em;
+    }
+    footer{
+        width: 207%;
+        padding-bottom: 32vh;
+    }
+}
+>>>>>>> 5a0245c5792040cb396c3e5178ee0abf4b5c7d31

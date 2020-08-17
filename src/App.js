@@ -1,5 +1,4 @@
 import React from 'react';
-
 import {
   BrowserRouter as Router,
   Switch,
@@ -26,15 +25,13 @@ function App(props) {
         <Header />
         {/* <Search /> */}
       <Switch>
-        <Route path="/details" component={DetailedArtist2}>
-          <DetailedArtist2 />
 
-        </Route>
           <Route path="/" exact>
-          {/* <MusicList /> */}
-          {/* </Route>
+          <MusicList />
+          </Route>
+
           <Route path="/artists/:id" component={DetailedArtist} />
-          <Route> */}
+          <Route>
             <NoMatch />
           </Route>
       </Switch>
