@@ -1,17 +1,20 @@
 import React, { Component } from 'react';
-// import MusicItem from './MusicItem';
+import MusicItem from './MusicItem';
 
 
 const url = "https://api.spotify.com/v1/artists?ids=2CIMQHirSU0MQqyYHq0eOx%2C57dN52uHvrHOxijzpIgu3E%2C1vCWHaC5f2uS3yhpwWbIA6%2C3fMbdgg4jU18AjLCKBhRSm%2C6tbjWDEIzxoDsBA1FuhfPW%2C5pKCCKE2ajJHZ9KAiaK11H%2C2QsynagSdAqZj3U9HgDzjD%2C3qm84nBOXUEQ2vnTfUTTFC%2C27T030eWyCQRmDyuvr1kxY%2C58lV9VcRSjABbAbfWS6skp%2C3WrFJ7ztbogyGnTHbHJFl2%2C22bE4uQ6baNwSHPVcDxLCe"
 const options = {
   headers: {
-    Authorization: "Bearer BQDl3W7HzYkPBu7wVZg28E6LFA33D5OHFaAdQeu9TGqnor9bxRMhQz14_iLlV6uMc7763agLvFSGuat1H4Re_XRWcIFdPL_ocNhzsyBg6qByVFq19ViirN5DPldSjbsJj-B7Zg9Yaij7ehe_v90qKEsA920wkxrqUppXwDMT-rQpYphloLzPv5qg6RiwaYHhAGFhKEqDqM4GxqgZr8HG0NqZLFPUmHvr0VJoVzx_JdekcpIRunve0jPZ3WKKufb7oyMUAd0aOfY9QunD28lNbEWLLrqeiiAl"
+    Authorization: "Bearer BQBmW_m6p8Y9g22ecIoV8c44xA9crSoVVs-ZudPgNfA6Am1sFm92MH_IH9Mxl25quYO2YXZVPB1HaNwx20HnjxdTCBmwacIQcgh7Xsvxp3TifOkL62jwtY9qAB-2O6JqEKWBsuRGgrbe5h3ypUdTGMtwtrPZen05ipi-cLtzq_E45We_Glq_k5-hqxEmbDim3gFRzSxwfGQpDaZ9KDFNUopzEsfWwaDHKXHdWuFk6q-5zqQJNAzONzZlxyVFzKk9ShCGfD1nKPVnl_DBlq_EMu1mOiQGISDa"
   }
 };
 
 class MusicList extends Component {
   state = {
-data: []
+    data: [],
+    color: ["red", "blue", "green", "green", "red", "blue", "red", "blue", "green", "green", "red", "blue"],
+    fromAtoZ: true,
+    descending: true
   }
   
     componentDidMount() {
@@ -22,24 +25,102 @@ data: []
         this.setState({ data: json.artists });
         console.log(this.state.data)
       })
+    }
+  
+  handleColor = () => {
+    console.log(this.state.color)
+    const num = Math.floor(Math.random() * 3); 
+    console.log(num)
+    if (num==0) {
+      this.state.color="red"
+    } else {
+      this.state.color="blue"
+    }
   }
+  handleSort = () => {
+    if (this.state.fromAtoZ) {
+        const newData = this.state.data.slice()
+        newData.sort((elt1, elt2) => {
+            let a = elt1.name.toUpperCase()
+            let b = elt2.name.toUpperCase()
+            if (a < b) {
+                return -1
+            } else if (a > b) {
+                return 1
+            } else {
+                return 0
+            }
+        })
+        this.setState({ data: newData });
+        this.setState({ fromAtoZ: !this.state.fromAtoZ });
+    } else {
+        const newData = this.state.data.slice()
+        newData.sort((elt1, elt2) => {
+            let a = elt1.name.toUpperCase()
+            let b = elt2.name.toUpperCase()
+            if (a < b) {
+                return 1
+            } else if (a > b) {
+                return -1
+            } else {
+                return 0
+            }
+        })
+        this.setState({ data: newData });
+        this.setState({ fromAtoZ: !this.state.fromAtoZ });
+    }
+  }
+  handlePopularity = () => {
+if (this.state.descending) {
+  const newData = this.state.data.sort((a, b) => {
+    return b.popularity - a.popularity
+})
+  this.setState({ data: newData });
+  this.setState({ descending: !this.state.descending  });
+  console.log(this.state.data)
+  
+} else {
+  const newData = this.state.data.sort((a, b) => {
+    return a.popularity - b.popularity
+})
+  this.setState({ data: newData });
+  this.setState({ descending: !this.state.descending  });
+console.log(this.state.data)
+}
+  }
+  
+  deleteContact = (id) => {
+    console.log(id)
+    const newData = this.state.data.filter(elt => elt.id !== id)
+    this.setState({ data: newData  });
+  }
+
 
   render() { 
     return ( 
-        <div className="grid">
-            {/* {this.state.data.map((elt, i) =>
+      <main>
+        <input type="button" value="Sort by name" onClick={this.handleSort}/>
+        <input type="button" value="Sort by popularity" onClick={this.handlePopularity}/>
+        <div className="grid1">
+            {this.state.data.map((elt, i) =>
                 <MusicItem
                     key={i}
                     images={elt.images}
                     name={elt.name}
                     popularity={elt.popularity}
+                    id={elt.id}
+                    color={this.state.color[i]}
+                    deleteContact={this.deleteContact}
+           
+      
                 />
             
             
             
-            )} */}
+            )}
             
-      </div>
+        </div>
+        </main>
      );
   }
 }

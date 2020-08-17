@@ -6,7 +6,7 @@ import link from './Fotos/link.webp'
 import snap from './Fotos/snap.png'
 import twitt from './Fotos/twitt.png'
 import what from './Fotos/what.png'
-import Logo from './Fotos/Logo.jpg'
+import Logo from './Fotos/Logo.png'
 
 
 
