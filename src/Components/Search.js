@@ -6,15 +6,15 @@ import MusicItem from './MusicItem';
 
 const options = {
     headers: {
-        Authorization: "Bearer BQDt4KTA5Ll-7ESz5EHs6nrO6DN5tqHl99dD0FKWEjRtUoMSdS0cdTiyvZ123dxYJ-XeY4TaLFE_eWWb_CLHYYJfXjVCbILczc71ZIOFIfU4pVU_3HbGP_a8_mfJHmBEc2v9rhVvYHwI6F3IMNuFXIMrWUluWweLfmk4pXejtGjO7Qu9yJP-kT-hOm27uav7dRa2SI-QMqzvNohdek1JJfWqXDzTV8F4CnqrVFfvSr72pNpCYb9zQncGDmLdSdlCSYnNTRMQVdWoR2MYRWoIIyiXpyeT2MFn"
+        Authorization: "Bearer BQBET-g_w6JqnrMKwamsnF4ccrKs42kIJaeTS0byUMK7t6otPASropoUmikzKEveNgllokirzTfWw31MF24ATPFSimhRSx6d3mNNHE14aUQaRRtc7GA2JzKFGDRmf5esFIU-mr3FLgpOLhZlPEyWeEJ47Xs4U24dux3YeeADxTes1Tk4dgtl_frrAd0GHKacUfSHDFHhWsa2UfejeYkSkjK_0MNlWuMyeRaV_VkD2dwE32oNucFAq-vbLHQQLPx3bUgSkFolwGJY7DPAJrkm437_Y1w7Zhe8"
     }
 };
 class Search extends Component {
     state = {
-        q: "",
         search: "",
         data: [],
-        color: ["red", "blue", "green", "green", "red", "blue", "red", "blue", "green", "green", "red", "blue","red", "blue", "green", "green", "red", "blue", "red", "blue"],
+        color: ["red", "blue", "green", "green", "red", "blue", "red", "blue", "green", "green", "red", "blue", "red", "blue", "green", "green", "red", "blue", "red", "blue"],
+        isLoading:true
     }
     handleArtist = (event) => {
         this.setState({ search: event.target.value });
@@ -22,32 +22,42 @@ class Search extends Component {
 }
 
     handleSubmit = (event) => {
-        this.setState({ q: this.state.search });
-        console.log(this.state.q);
+        fetch(`https://api.spotify.com/v1/search?q=${this.state.search}&type=artist`, options)
+        .then(res => res.json())
+        .then(json => {
+            // console.log(json);
+            // this.setState({ data: this.state.data.push(json.artists) });
+            // console.log(typeof(json.artists))
+            const newArr = json.artists
+            console.log(`newArr:`, newArr)
+            
+            this.setState({ data: newArr }, () => console.log("test", this.state.data));
+            this.setState({ data:this.state.data.items  }, () => {
+
+                console.log(`data:`, this.state.data)
+                this.setState({ isLoading:!this.state.isLoading  });
+         
+
+        })
+            
+          })
+    
+
+  
+
         event.preventDefault();
     }
-    handleClear = (event) => {
-        this.setState({ search: "" });
-        this.setState({ q: "" });
-        event.preventDefault();
-    }
+    // handleClear = (event) => {
+    //     this.setState({ search: "" });
+    //     event.preventDefault();
+    // }
       
-  deleteContact = (id) => {
+  deleteArtist = (id) => {
     console.log(id)
     const newData = this.state.data.filter(elt => elt.id !== id)
     this.setState({ data: newData  });
   }
 
-  
-        componentDidMount() {
-            fetch(`https://api.spotify.com/v1/search?q=${this.state.q}&type=artist`, options)
-                .then(res => res.json())
-                .then(json => {
-                    // console.log(json);
-                    this.setState({ data: this.state.data.push(json.artists) });
-                    console.log(this.state.data)
-                  })
-                }
               
 render() {
     return (
@@ -56,11 +66,11 @@ render() {
                 <input id="text" type="text" placeholder='Search for an artist....' onChange={this.handleArtist} />
 
                 <input id="bot1" type="button" value="SEARCH" onClick={this.handleSubmit} />
-
-                <input id="bot1" type="button" value="CLEAR SEARCH" onClick={this.handleClear} />
+{/* 
+                <input id="bot1" type="button" value="CLEAR SEARCH" onClick={this.handleClear} /> */}
             </form>
             <div className="grid1">
-            {this.state.data.map((elt, i) =>
+{this.state.isLoading?'loading':this.state.data.map((elt, i) =>
                 <MusicItem
                     key={i}
                     images={elt.images}
@@ -68,15 +78,11 @@ render() {
                     popularity={elt.popularity}
                     id={elt.id}
                     color={this.state.color[i]}
-                    deleteContact={this.deleteContact}
+                    deleteArtist={this.deleteArtist}
            
       
-                />
-                
-            
-            
-            
-            )}
+                />)}
+
             
         </div>
         </div>

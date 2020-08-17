@@ -13,7 +13,7 @@ const MusicItem = (props) => {
                 <Link to={`/artists/${props.id}`}><img src={props.images[0].url} alt="" /></Link>
                 <h1 className="artist_name">{props.name}</h1>
                 <p className="popularity">Popularity: {props.popularity}</p>
-                <button onClick={() => props.deleteContact(props.id)}>delete</button>
+                <button onClick={() => props.deleteArtist(props.id)}>delete</button>
             </div>
         </div>
       );

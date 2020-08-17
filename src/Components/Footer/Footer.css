@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
 }
-/* footer{
+ footer{
     background:rgb(246, 246, 246) ;
     padding: 16vh 0;
 }
@@ -64,10 +64,6 @@
     margin: 0 auto;
 }
 .width{
-<<<<<<< HEAD
-    width: 65%;
-} */
-=======
     width: 68%;
 }
 .footerTail{
@@ -139,4 +135,3 @@
         font-size: 0.9em;
     }
 }
->>>>>>> cfb61b888d263c65121c2b4314a0fc4aa333f78c

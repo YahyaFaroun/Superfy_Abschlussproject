@@ -2,34 +2,43 @@ import React, { Component } from 'react';
 
 let data
 
+let offset = Math.floor(Math.random() * 21); 
+
 
 
 // const url = 'https://api.spotify.com/v1/artists/${this.props.id}'
 
 const options = {
   headers: {
-    Authorization: "Bearer BQBOAHnVRW8Sszx6IRUnhv7nIQF5MHT5z2x2TSIqgfujwawSbpdemAIF5ra4bVHCyhkT41urfZfaJ528dtMoKrBnIXEqUCpFR5-JLgbaSrfCJkSIO5RYREWqnOQOCs_EfRZzEERQGnzdmfoCjKODZjc105e5tVEbrDIR3FDdPREQ8wM1AOBPHcEaxLj5fxArJdXxhFKpRo8DaVSe4s35Ml197S8MR4Wq7g7RlMbcfqcP_xVUts1NWOUYNx2hLgBDqdgaX5ANdJqBCieKqUz5NO_eGEYdZDhE"
+    Authorization: "Bearer BQDUwLgYqwZh6WGlUCrhS0VLJurqeHV7HzEjXOJYmBHmTMTD2wTgoR8QozvuWnyXqKDCEzabBGBDDkvBDL65WIIUAsU_ZxHFUv6BNUCeVZwo4zD8OERmdkIT0iS0tH5mA-k2b97qglMN0henpVhHJC959AtJ1tPKD14uPVENoxrPy4yGjJlqlVR0Sa3tZOt6QolzICDLF0f0AOETQ_OxvNAYVKoxL3y5sH0xePzRKzwOYQiCdN3vGF6a348FZBiIRNh3c_La2pjPjvyI_jUaSlSDqBRAF4G9"
   }
 };
 
 class DetailedArtist extends Component {
     state = { 
-        dataDetails: {},
+        dataDetails: [],
         
         isLoaded: false
     }
 
     componentDidMount() {
-        fetch(`https://api.spotify.com/v1/artists/${this.props.match.params.id}/albums?limit=2`,options)
+        fetch(`https://api.spotify.com/v1/artists/${this.props.match.params.id}/albums?offset=${offset}&limit=6&market=DE`,options)
         .then(res => res.json())
         .then(json => {
             let newArr = []
-                newArr.push(json)
-                this.setState({ dataDetails: newArr }, () => {
-                    data = this.state.dataDetails.map((elem,i) =>
+            newArr.push(json.items)
+            console.log(json)
+            console.log(newArr)
+            
+            this.setState({ dataDetails: newArr }, () => {
+                console.log( this.state.dataDetails)
+                data = this.state.dataDetails[0].map((elem, i) =>
+                       
                         <article key={i}>
-                            <h2>{elem.items[0].name}</h2>
-                            {/* <a href={elem.external_urls}>   <img src={elem.images[0].url} alt="" /></a> */}
+                            <h2>{elem.name}</h2>
+                            <a href={elem.external_urls.spotify}>   <img src={elem.images[0].url} alt="" /></a>
+                            <h1>{elem.album_type}</h1> 
+               
         
     
                      
@@ -37,7 +46,7 @@ class DetailedArtist extends Component {
                     )
                     this.setState({ isLoaded: true });
                 })
-      
+                
         })
     }
 

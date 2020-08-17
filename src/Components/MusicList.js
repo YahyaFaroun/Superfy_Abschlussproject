@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-// import MusicItem from './MusicItem';
+import MusicItem from './MusicItem';
 
 
 const url = "https://api.spotify.com/v1/artists?ids=2CIMQHirSU0MQqyYHq0eOx%2C57dN52uHvrHOxijzpIgu3E%2C1vCWHaC5f2uS3yhpwWbIA6%2C3fMbdgg4jU18AjLCKBhRSm%2C6tbjWDEIzxoDsBA1FuhfPW%2C5pKCCKE2ajJHZ9KAiaK11H%2C2QsynagSdAqZj3U9HgDzjD%2C3qm84nBOXUEQ2vnTfUTTFC%2C27T030eWyCQRmDyuvr1kxY%2C58lV9VcRSjABbAbfWS6skp%2C3WrFJ7ztbogyGnTHbHJFl2%2C22bE4uQ6baNwSHPVcDxLCe"
 const options = {
   headers: {
-    Authorization: "Bearer BQBmW_m6p8Y9g22ecIoV8c44xA9crSoVVs-ZudPgNfA6Am1sFm92MH_IH9Mxl25quYO2YXZVPB1HaNwx20HnjxdTCBmwacIQcgh7Xsvxp3TifOkL62jwtY9qAB-2O6JqEKWBsuRGgrbe5h3ypUdTGMtwtrPZen05ipi-cLtzq_E45We_Glq_k5-hqxEmbDim3gFRzSxwfGQpDaZ9KDFNUopzEsfWwaDHKXHdWuFk6q-5zqQJNAzONzZlxyVFzKk9ShCGfD1nKPVnl_DBlq_EMu1mOiQGISDa"
+    Authorization: "Bearer BQBJbrKPXE5hKFKDJYr6ohBiDHbOhAnisL8PNsgaNxKPuNpSh5Xr0ngdDHtH6Q6lVXhxTPzqtGEBdQkV6zQqV7M3TeDNZv-RHL9b-7-oAFnjPVl1wKN3EbWmhg42fSD-IQIXRjj0RdiVDdzXJ6g3DnOxDoAR4Oa5RyfqviBRvDBdILWzPFABBJv9FaH2JwI4p-U-rstdasnlloBZWoVF0uH05rm2xG4kp6ErD16EQ3OYtDNm4kKoFnUDrO4UbbW3gPyiNm_P-WwYoOC6l9skWGroMojrfeAz"
   }
 };
 
@@ -89,7 +89,7 @@ console.log(this.state.data)
 }
   }
   
-  deleteContact = (id) => {
+  deleteArtist = (id) => {
     console.log(id)
     const newData = this.state.data.filter(elt => elt.id !== id)
     this.setState({ data: newData  });
@@ -110,7 +110,7 @@ console.log(this.state.data)
                     popularity={elt.popularity}
                     id={elt.id}
                     color={this.state.color[i]}
-                    deleteContact={this.deleteContact}
+                    deleteArtist={this.deleteArtist}
            
       
                 />

@@ -22,10 +22,10 @@ function App(props) {
     <Router>
       {props.children}
       <div>
-        <Header />
-        {/* <Search /> */}
+        {/* <Header /> */}
       <Switch>
           <Route path="/" exact>
+          <Search />
           <MusicList />
           </Route>
           <Route path="/artists/:id" component={DetailedArtist} />
