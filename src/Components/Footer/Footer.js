@@ -6,7 +6,7 @@ import link from './Fotos/link.webp'
 import snap from './Fotos/snap.png'
 import twitt from './Fotos/twitt.png'
 import what from './Fotos/what.png'
-import spotify from './Fotos/Spotify.png'
+import Logo from './Fotos/Logo.jpg'
 
 
 
@@ -40,7 +40,7 @@ const Footer = () => {
                 <p>© All rights reserved</p><span className='spano inline'>|</span>
                 <p className='left'>Design: SuperFY</p>
             </div>
-            <img className='spotify' src={spotify} alt=""/>
+            <img className='logo' src={Logo} alt=""/>
         </article>
     </footer>
      );

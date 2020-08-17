@@ -79,9 +79,10 @@ footer{
 .spano{
     margin: 0 2%;
 }
-.spotify{
+.logo{
     width: 12%;
     margin-left:47%;
+
 }
 @media only screen and (max-width: 768px){
     .flex{flex-direction: column;width: 80%;}
@@ -93,7 +94,7 @@ footer{
     .footerTail{
         position: relative;
     }
-    .spotify{
+    .logo{
         position: absolute;
         bottom: 0;
         right:10%;
@@ -114,7 +115,7 @@ footer{
     .footerTail{
         position: relative;
     }
-    .spotify{
+    .logo{
         position: absolute;
         bottom: 0;
         right:10%;
