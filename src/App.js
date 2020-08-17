@@ -10,8 +10,8 @@ import MusicList from './Components/MusicList';
 const App = () => {
   return ( 
       <div>
-      <Header />
-      <MusicList />
+      {/* <Header />
+      <MusicList /> */}
       <Footer />
     </div>
    );

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import MusicItem from './MusicItem';
+// import MusicItem from './MusicItem';
 
 
 const url = "https://api.spotify.com/v1/artists?ids=2CIMQHirSU0MQqyYHq0eOx%2C57dN52uHvrHOxijzpIgu3E%2C1vCWHaC5f2uS3yhpwWbIA6%2C3fMbdgg4jU18AjLCKBhRSm%2C6tbjWDEIzxoDsBA1FuhfPW%2C5pKCCKE2ajJHZ9KAiaK11H%2C2QsynagSdAqZj3U9HgDzjD%2C3qm84nBOXUEQ2vnTfUTTFC%2C27T030eWyCQRmDyuvr1kxY%2C58lV9VcRSjABbAbfWS6skp%2C3WrFJ7ztbogyGnTHbHJFl2%2C22bE4uQ6baNwSHPVcDxLCe"
@@ -27,7 +27,7 @@ data: []
   render() { 
     return ( 
         <div className="grid">
-            {this.state.data.map((elt, i) =>
+            {/* {this.state.data.map((elt, i) =>
                 <MusicItem
                     key={i}
                     images={elt.images}
@@ -37,7 +37,7 @@ data: []
             
             
             
-            )}
+            )} */}
             
       </div>
      );
