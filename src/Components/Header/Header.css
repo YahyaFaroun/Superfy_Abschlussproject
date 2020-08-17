@@ -1,77 +1,111 @@
+<<<<<<< HEAD
 /* 
 #hero{
+=======
+#abdulhaq{
+>>>>>>> cfb61b888d263c65121c2b4314a0fc4aa333f78c
     margin: 0;
+    padding: 0;
     height: 70vh;
 }
+<<<<<<< HEAD
 h1 span:nth-of-type(1){
     /* color: rgb(68, 67, 67); */
     /* font-size: 1.5em;
+=======
+#abduh1{
+    display: flex;
+    margin-left: 20%;
+    margin-top: 5%;
+    /* align-items: center; */
+}
+#abduh1s1{
+    color: rgb(68, 67, 67);
+    font-size: 1.5em;
+>>>>>>> cfb61b888d263c65121c2b4314a0fc4aa333f78c
     letter-spacing: 20px;
     text-shadow: black;
     margin-top: 2%;
+    align-items: center;
 }
-h1 span:nth-of-type(2){
+#abduh1s2{
     border-right: black 5px solid;
     font-size: 3em;
     margin-left: 1%;
-
+    align-items: center;
 }
-h1 span:nth-of-type(3){
+#abduh1s3{
     font-size: 2.5em;
     margin-left: 3%;
-
+    align-items: center;
 }
-h1{
-    display: flex;
-    margin-left: 20%;
-    
-}
-h2{
+#abduh2{
     font-size: 3em;
     display: flex;
+    align-items: center;
     margin-top: 7%;
     margin-left: 8.5%;
     color: grey;
 }
-h2 span:nth-of-type(1){
+#abduh2s1{
     margin-left: 1%;
+    /* align-items: center; */
 }
-h2 span:nth-of-type(2){
+#abduh2s2{
     margin-left: 2.5%;
+    /* align-items: center; */
 }
-h2 span:nth-of-type(3){
+#abduh2s3{
     margin-left: 1%;
+<<<<<<< HEAD
 } */
+=======
+    /* align-items: center; */
+}
+>>>>>>> cfb61b888d263c65121c2b4314a0fc4aa333f78c
 /* #bot1{ */
     /* position: absolute;
     display: flex;
     margin-top: -6%;
     margin-left: 50%; */
 /* } */
+<<<<<<< HEAD
 /* #text{
+=======
+#buttons{
+    margin-top: -4%;
+   display: flex;
+}
+#textbut1{
+>>>>>>> cfb61b888d263c65121c2b4314a0fc4aa333f78c
     display: flex;
-    margin-top: -6.9%;
+    align-items: center;
     margin-left: 45%;
     width: 45vw;
     height: 6vh;
     border: grey 4px solid;
-
 }
-#bot1{
+#but1{
     /* position: relative; */
     /* margin-left: 77%;
     background: rgb(56, 240, 127);
     position: absolute;
-    margin-top: -3.9%;
-    height: 6.3%;
+    /* margin-top: -3.9%; */
+    margin-top: 1px;
+    height: 6.6%;
     width: 13.6%;
+    align-items: center;
 }
-p:nth-of-type(1){
+#abdpara1{
     margin-top: 5%;
     margin-left: 8.5%;
     width: 75%;
 }
-p:nth-of-type(2){
+#abdpara2{
     margin-left: 8.5%;
+<<<<<<< HEAD
 } */
 
+=======
+}
+>>>>>>> cfb61b888d263c65121c2b4314a0fc4aa333f78c
