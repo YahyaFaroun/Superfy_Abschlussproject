@@ -2,14 +2,15 @@
     display: grid;
     grid-template-columns: repeat(2,1fr);
     justify-content: center;
-    gap: 1em;
+    gap: 2.5em;
     margin: 0 auto;
     width: 90%;
     align-items: center;
     text-align: center;
 }
-.container{
+.container_albums{
     position: relative;
+    overflow: hidden;
 }
 .overlay {
     position: absolute;
@@ -18,12 +19,12 @@
     right: 0;
     background-color: white;
     opacity: .5;
-    overflow: hidden;
     width: 100%;
     /* height:0; */
     transition: .5s ease;
+    overflow: hidden;
 }
-.container:hover .overlay{
+.container_albums:hover .overlay{
     bottom: 0;
     height: 100%;
 }
@@ -56,29 +57,33 @@
         justify-content: center;
         width: 90%;
         margin: 0 auto;
-        height: 80vh;
-        
+        margin: 5vh auto;    
     }
-    .album{
-        margin: 5vh auto;
-    }
+    
 }
 @media only screen and (max-width: 320px){
+    
     .albums{
-        height: 80vh;
-    }
-    .albus{
-        display:grid;
+        display: grid;
         grid-template-columns: 1fr;
         justify-content: center;
         width: 90%;
         margin: 0 auto;
+        height: 100%;
     }
-    .container{
-        width: 50%;
+    .container_albums{
+        width: 100%;
     }
     img{
         width: 300px;
-        
+        height: 300px;
         }
+    .overlay{
+        width: 300px;
+    }
+    .container_albums:hover .overlay{
+        bottom: 0;
+        height: 100%;
+    }
+
 }

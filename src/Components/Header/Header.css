@@ -9,41 +9,35 @@
 }
 .header{
     display: flex;
-    margin: 10vh 0 8vh 10%;
-}
-.div{
-    height: 95px;
-    border: solid 2px;
-    margin:0 20px 0 0;
+    margin: 10vh 0 8vh 3%;
 }
 .sf{
     font-size: 2.5em;
     letter-spacing: 20px;
     padding-top: 20px;
-    -webkit-text-fill-color: rgb(88, 88, 88); 
+    -webkit-text-fill-color: rgb(88, 88, 88);
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: black;
     text-shadow: 0 3px 3px rgb(88, 88, 88);
 }
-.charts{
-    padding-top: 20px;
-    font-size: 3em;
-    letter-spacing: 10px;
-}
 .searchB{
-    display: flex;
-    margin-left: 10%;
+    text-align: center;
 }
-.searchA{
-    width: 40%;
+#paragraph{
+    color: rgb(88, 88, 88);
+    text-align: center;
+    margin: 4vh 0;
 }
+
+
 #input{
-    width: 100%;
+    width: 40%;
     border: rgb(183, 177, 177) solid 3px;
     padding: 10px 0 10px 25px;
     font-size: 1em;
     color: rgb(183, 177, 177);
-    margin:1vh 0 0 7%;
+    position: absolute;
+    right: 2.8%;
 }
 .in{
     position: relative;
@@ -55,8 +49,8 @@
 }
 .butt{
     position: absolute;
-    right: -64px;
-    top: 10.1px;
+    right: 3%;
+    top: 3px;
     background: rgb(56, 240, 127);
     padding: 11px 30px;
     letter-spacing: 8px;
@@ -64,75 +58,100 @@
     border: none;
     box-shadow: 0 0 5px rgb(88, 88, 88);
 }
-.top{
-    font-size: 2.5em;
-    color: rgb(88, 88, 88);
-    margin-right: 2%;
+.butt:hover, .butt_clear:hover, .butt_random:hover {
+    opacity: 50%;
 }
-#paragraph{
-    margin-left: 10%;
-    color: rgb(88, 88, 88);
-    width: 65%;
-    line-height: 4vh;
-    margin-top: 4vh;
+.butt_clear {
+    background: rgb(56, 240, 127);
+    padding: 11px 40px;
+    letter-spacing: 8px;
+    outline: none;
+    border: none;
+    box-shadow: 0 0 5px rgb(88, 88, 88);
+    position: absolute;
+    right: 3%;
+    top: 60px;
 }
-
+.butt_random {
+    background: rgb(56, 240, 127);
+    padding: 11px 40px;
+    letter-spacing: 8px;
+    outline: none;
+    border: none;
+    box-shadow: 0 0 5px rgb(88, 88, 88);
+    position: absolute;
+    right: 3%;
+    top: 110px;
+}
+.search {
+   height: 20vh
+}
+strong{
+    display: block;
+    margin: 2vh 0;
+}
 @media only screen and (max-width: 768px){
-    #input{    
-        padding: 10px 0 10px 0;
-        font-size: 12px;
-        margin-top: 1vh;
-    }
-    .top{
-        margin-right: 0;
-    }
-    .butt{
-        right: -23px;
-        top: 3px;
-        padding: 9px 10px;
-        letter-spacing: 5px;
-        outline: none;
-        border: none;
-        box-shadow: 0 0 5px rgb(88, 88, 88);
-        margin-top: 1vh;
-    }
-    .container{
-        display: flex;
-        width: 45%;
+    .searchB{
+        text-align: center;
+        width: 90%;
+        margin: 0 auto;
     }
     #paragraph{
-        width: 80%;
+        text-align: center;
+        width: 90%;
+        margin: 5vh auto;
     }
+    #input{
+        width: 50%;
+    }
+    .butt_random {
+        top: 100px;
+    }
+
+ 
 }
 @media only screen and (max-width: 320px){
     .searchB{
-        flex-direction: column;
-    }
-    .butt{
-        right: -41px;
-        top: 3px;
-        padding: 9px 10px;
-        outline: none;
-    }
-    .searchB{
-        width: 207%;
-        margin:0 auto;
         text-align: center;
-    }
-    .container{
-        display: flex;
-        width: 50%;
-        justify-content: space-between;
-        margin: 0 auto;
-    }
-    .searchA{
-        margin: 5vh auto;
-        width: 85%;
-        margin-left: 2%;
     }
     #paragraph{
-        width: 200%;
         text-align: center;
-        margin-left:5%;
+    }
+    .logoH{
+        width: 50px;
+        height: 50px;
+        margin: 2vh 3vw 0 0;
+    }
+    .sf{
+        font-size: 1.5em;
+    }
+    #input{
+        width: 83%;
+    }
+    .butt{
+        padding: 11px 20px;
+        letter-spacing: 2px;
+    }
+    .butt_clear{
+        padding: 11px 26px;
+        letter-spacing: 2px;
+    }
+    .butt_random {
+        padding: 11px 26px;
+        letter-spacing: 2px;
+        top: 450px;
+        right: 30%
+    }
+    .header{
+        display: block;
+        text-align: center;
+        margin-top: 3vh;
+    }
+    .logoH{
+        width: 80px;
+        height: 70px;
+    }
+    #paragraph {
+        height: 25vh;
     }
 }

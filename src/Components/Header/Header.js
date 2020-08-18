@@ -4,29 +4,15 @@ import Logo from '../Footer/Fotos/Logo.png'
 const Header = () => {
     return (
         <div>
-            <section className='header'>
-                <img className='logoH' src={Logo} alt=""/>
-                <p className='sf'>SuperFy</p>
-                <div className='div'></div>
-                <p className='charts'>Charts</p>
+            <section className="header">
+                <img className="logoH" src={Logo}/>
+                <p className="sf">SuperFy</p>
             </section>
-            <article className='searchB'>
-                <div className='container'>
-                    <p className='top'>TOP XX</p>
-                    <p className='top'>VIRAL 50</p>
-                </div>
-            <article className='searchA'>
-                <form className='in' action="">
-                    <input type="text" name="" id="input" placeholder='Search by keyword or item...'/>
-                    <input className='butt' type="submit" value="SEARCH"/>
-                </form>
+            <article className="searchB">
+                <h2 className="h2H">Greatest Albums of all time</h2>
             </article>
-            </article>
-            <div id="paragraph">
-            <p id="abdpara1">Die CHARTS TOP Fy  vom 13.08.2020 sind online.Alle Neueinsteiger
-                in den Charts findest du in der Übersicht.Wir freuen uns, wenn du auch
-                diese Woche wieder deine Top-Charts tippst.Zahlreiche Neueinsteiger haben es in die Top Fy geschafft.
-            </p>
+            <div id='paragraph'>
+            <p>The Greatest of All-Time Billboard Hot 100 Artists rankings are based on weekly performance on the Hot 100.<strong>Have fun!</strong></p>
             </div>
         </div>
     );
