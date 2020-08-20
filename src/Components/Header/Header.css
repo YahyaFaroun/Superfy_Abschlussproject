@@ -5,13 +5,13 @@
 .logoH{
     width: 120px;
     height: 100px;
-    margin-right: 2%;
 }
 .header{
     display: flex;
     margin: 10vh 0 8vh 3%;
 }
 .sf{
+    margin-left: 2%;
     font-size: 2.5em;
     letter-spacing: 20px;
     padding-top: 20px;

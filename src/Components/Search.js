@@ -7,7 +7,7 @@ import MusicItem from './MusicItem';
 
 const options = {
     headers: {
-        Authorization: "Bearer BQAcsK8amjb0pqfcs14bckpu5AQJk_rdod97q-suVpTTIPYNY0KEYGv9dXPoDnnwFvFhU897ung-YtSvBaaWU1X0S3RZKmApkjP8oRee_Frew3Gtce8m0Lok3IyQMYJtf3miWrf4yoPfmiBl9ClCj4H9oTYwNm9byAYg4u_hyQgZYn-wUrvZmohyHnH_dSDFLtQPP-OH7qnSy4hFT1A6U7hDcLGXUz58xi0qvfMPLYRY5RmequBhwUndmMwoPVRdqaHa_7E-yPnxuSXIGdXkHpcexO1rycEo"
+        Authorization: "Bearer BQB3ViBCyJYh9hJxT6Ry1FKxl43TzBt-rmp3UdhekFR8QE5pS6InhdgS1XuNoCGj4_L6Sn1O5ZaYzzcs3Mm0N8Wbyd6scr2jiTzeHR4a6P26ZMRRJYe8Op5fhaZa8m18CWNo2d6rUkVGYo3xx7XWuK5zu3gJDNwMdemz3xPB9kujNGwbt4hzoOfCa6iG2V7wMMNYCAtJ2Vvwrhza43-BMWFIEhKJSmn93auBmUK_aYLqY05U3iFjweZbCs-leBF7hR4NApeTeHXPWCuzhNnFqFk2MUMbmHaF"
     }
 };
 class Search extends Component {

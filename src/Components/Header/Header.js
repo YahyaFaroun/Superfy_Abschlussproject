@@ -1,11 +1,15 @@
 import React from 'react';
 import './Header.css'
 import Logo from '../Footer/Fotos/Logo.png'
+import { Link } from 'react-router-dom'
+
 const Header = () => {
     return (
         <div>
             <section className="header">
+                <Link to ="/">
                 <img className="logoH" src={Logo}/>
+                </Link>
                 <p className="sf">SuperFy</p>
             </section>
             <article className="searchB">
